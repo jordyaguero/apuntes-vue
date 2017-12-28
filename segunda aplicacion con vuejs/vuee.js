@@ -4,7 +4,8 @@
 let app = new Vue({
     el: '.vue',
     data: {
-        mensaje: 'Hola mundo'
+        mensaje: 'Hola mundo',
+        src: 'images/logo.png'
     },
     methods: {
         mostrarMensaje() {

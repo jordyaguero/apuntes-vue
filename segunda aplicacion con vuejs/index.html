@@ -13,6 +13,13 @@
 
     <div class="vue">
         <p>{{mostrarMensaje()}}</p>
+        <!-- no podemos utilizar interpolacion en elementos html x ejemplo scr-->
+        <!-- para eso utilizamos directivas 
+             con v- ya le estamos diciendo que es una directiva
+             v-bind:src es una directiva para enlaces sobre la propiedad src
+             y dentro de las comillas la propiedad
+            -->
+        <img v-bind:src="src" alt="vue">
     </div>
     <script src="vuee.js"></script>
 </body>
