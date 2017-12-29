@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enlace de datos dobles</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+    <div class="datosDobles">
+        <!-- v-model="propiedad" es para enlace de datos dobles -->
+        <input v-model="mensaje">
+        <hr>
+        <p>Hola mi nombre es {{mensaje}} y soy frontend developers</p>
+    </div>
+    <script src="datosDobles.js"></script>
+</body>
+
+</html>
