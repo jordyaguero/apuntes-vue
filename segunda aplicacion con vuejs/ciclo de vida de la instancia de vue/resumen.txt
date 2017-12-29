@@ -1,0 +1,21 @@
+
+ciclo de vida de la instancia de vue
+
+- cuando el programa comienza con new Vue(), vue llama automaticamente beforeCreate() 
+   llama justo antes de crear la instancia
+
+- una vez creada la instancia se llama al metodo create()
+
+- beforeMount(), se llama antes que monte la plantilla en el DOM, se llama antes de 
+   que monte la plantilla en el DOM
+
+- una vez se halla montado la plantilla se llama a mountend()
+
+- si va ver informacion que va a a cambiar llamaremos a beforeUpdate() antes de actualizar algo
+
+- update(), cuando ya se hizo la actualizacion
+
+- beforeDestroy(), cuando ya termina la vida de la instancia de vue y queramos destruirla
+   que se llama justo antes de destruir la instancia
+
+- destroy(), cuando la aplicacion ya asido destruida
