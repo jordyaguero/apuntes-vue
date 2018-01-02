@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-for</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+    <div class="vFor">
+        <ul>
+            <template v-for="pais in paises">     
+                <li>
+                    {{pais}}
+                </li>
+                <hr>
+            </template>
+        </ul>
+        <!-- si pasamos un segundo parametro a v-for 
+        seria el indice de los elementos-->
+        <ul>
+            <li v-for="(lugar, indice) in lugares">
+                {{indice + 1}} - {{lugar.nombre}}
+            </li>
+        </ul>
+        <ul class="empleado">
+            <li v-for="(valor, indice) in empleado">
+                {{indice}} - {{valor}}
+            </li>
+        </ul>
+    </div>
+    <script src="vFor.js">
+    </script>
+</body>
+
+</html>

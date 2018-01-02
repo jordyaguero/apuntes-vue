@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-if</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+    <div id="vm">
+        <!-- si la condicion es falsa no lo oculta como css
+        vue lo que hace es eliminarlo del DOM
+         -->
+        <!-- <div v-if="mostrar">-->
+        <!--
+                template se usasi no queremos mostrar la 
+                etiqueta div y solo se mostraria el contenido
+            -->
+        <template v-if="mostrar">
+                <h3>titulo</h3>
+                <p>parrafo</p>
+                Este es el 1 mensaje
+        </template>
+        <!--</div> -->
+        <div v-else>Este es el 2 mensaje</div>
+    </div>
+    <script src="vIf.js">
+    </script>
+</body>
+
+</html>
