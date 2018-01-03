@@ -1,0 +1,17 @@
+
+.btn.primary {
+    border-radius: 0 .25rem .25rem 0;
+}
+
+.tareas-items {
+    position: relative;
+}
+.tareas-btn {
+    position: absolute;
+    right: 10px;
+}
+
+.terminada, .terminada:hover {
+    color: gray;
+    text-decoration: line-through;
+}
