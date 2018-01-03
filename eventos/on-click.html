@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>on-click</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+    <!-- moueseenter es cuando pasamos el mouse 
+    dentro del area -->
+    <div class="click">
+        <button v-on:mouseenter="sumar">sumar contador</button>
+        <button v-on:click="restar">restar contador</button>
+        <p>contador: {{contador}}</p>
+
+        <button v-on:click="alerta('hola ')">has click</button>
+
+    </div>
+
+    <!-- pasar arguemntos -->
+    <script src="onClick.js">
+    </script>
+</body>
+
+</html>

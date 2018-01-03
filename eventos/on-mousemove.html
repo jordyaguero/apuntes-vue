@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mousemove</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <style>
+        .mouseMove {
+            box-sizing: border-box;
+        }
+        
+        .marco {
+            height: 300px;
+            border: thin solid rgba(0, 0, 0, .5);
+        }
+        
+        .dentro {
+            height: 30px;
+            border: 1px solid peru;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- modificadores de evento:
+
+        * once,
+        * stop
+        - v-on:click.once="", le digo que solo se ejecute una sola vez
+        - v-on:mousemove.stop, hace una propagacion de eventos, osea que no se ejecute
+    -->
+    <div class="mouseMove">
+        <div @mousemove="modificar" v-on:click.once="sumar(3)" class="marco">
+            <div @mousemove.stop class="dentro">
+            </div>
+        </div>
+        x: {{x}} y: {{y}} contador: {{contador}}
+
+        <!-- cada vez que presiono una tecla
+            aumenta el contador
+
+            modificadores de tecla: 
+            .delete
+            .space
+            .enter, etc
+        -->
+        <input v-on:keyup="sumar(1)">
+        <!-- 
+            keyup.delete, suma el contador cada vez que
+            se borra algo que tecleamos
+        -->
+        <input @keyup.delete="sumar(1)">
+        <!-- 
+            keyup.space, suma al contador cada vez
+            que presiono un espacio
+        -->
+        <input v-on:keyup.space="sumar(1)">
+        <!-- 
+            cada vez que presionemos la combinacion
+            ctrl + c, suma el contador en uno
+        -->
+        <input v-on:keyup.ctrl.67="sumar(1)">
+
+        <!-- 
+            v-on: se puede reemplazar por @, ejm:
+            <div @click.once="modificar"></div>
+        -->
+    </div>
+
+    <script src="mouseMove.js">
+    </script>
+</body>
+
+</html>
