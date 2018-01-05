@@ -15,28 +15,12 @@
 <body class="container">
 
     <div id="app" class="jumbotron">
-        <h2>{{titulo}}</h2>
 
-        <div class="input-group">
-            <input v-model="nuevaTarea" @keyup.13="agregarTarea" class="form-control" placeholder="nueva tarea">
-            <span class="input-group-btn">
-                <button @click="agregarTarea" class="btn  btn-primary" type="button">Agregar Tarea</button>
-            </span>
-        </div>
+        <titulo></titulo>
 
-        <ul class="list-group  tareas">
-            <li v-for="(tarea, indice) of tareas" v-bind:class="{terminada: tarea.terminada}" class="list-group-item  tareas-items">
-                {{tarea.texto}}
-                <span class="tareas-btn">
-                    <button @click="tarea.terminada = !tarea.terminada" class="btn  btn-success  btn-sm" type="button">
-                        <i class="fa fa-check" aria-hidden="true"></i>
-                    </button>
-                    <button @click="borrar"  class="btn  btn-danger  btn-sm" type="button">
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </span>
-            </li>
-        </ul>
+        <nueva-tarea></nueva-tarea>
+
+        <mostrar-tareas></mostrar-tareas>
 
     </div>
 
